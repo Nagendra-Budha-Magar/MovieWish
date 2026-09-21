@@ -1,0 +1,15 @@
+{
+  "name": "moviewish",
+  "version": "1.0.0",
+  "description": "A movie and TV show review, rating and watchlist application",
+  "keywords": [
+    "Movie",
+    "TV-show",
+    "rating",
+    "watchlist",
+    "moviewish"
+  ],
+  "license": "ISC",
+  "author": "The Rising Coders",
+  "type": "module"
+}
