@@ -10,5 +10,8 @@
   "keywords": [],
   "author": "The Rising Coders",
   "license": "ISC",
-  "type": "module"
+  "type": "module",
+  "dependencies": {
+    "express": "^5.2.1"
+  }
 }
