@@ -12,6 +12,7 @@ const withDefaults = (profile) => ({
   dateOfBirth: profile.dateOfBirth ?? null,
   address: profile.address ?? null,
   githubId: profile.githubId ?? null,
+  avatar: profile.avatar ?? null,
 });
 
 // The ONLY way a user leaves this service: without the password hash.
@@ -112,6 +113,11 @@ export class UsersService {
       passwordHash: null, // OAuth-only account: cannot log in with a password
     });
     return toPublicUser(user);
+  }
+  
+    async setAvatar(id, avatar) {
+    await this.getById(id);
+    return toPublicUser(await this.users.update(id, { avatar }));
   }
 
   async #assertEmailAvailable(email, exceptId) {
